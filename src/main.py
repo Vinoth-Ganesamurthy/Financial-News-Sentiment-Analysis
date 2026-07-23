@@ -1,4 +1,5 @@
-from news_loader import load_dataset
+from data.news_loader import load_dataset
+from data.data_validator import validate_dataset
 
 
 def main() -> None:
@@ -6,6 +7,8 @@ def main() -> None:
 
     print(df.head())
     print(f"\nTotal records: {len(df)}")
+
+    validate_dataset(df)
 
 
 if __name__ == "__main__":
